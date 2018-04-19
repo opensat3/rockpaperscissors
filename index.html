@@ -48,9 +48,11 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-const playerSelection = "rock"
-const computerSelection = computerPlay()
-console.log(playRound(playerSelection, computerSelection))  
+function game() {
+    let playerSelection = prompt("rock, paper, scissors?")
+    console.log(playRound(playerSelection, computerPlay()))
+}
+
 </script>
 </body>
 </html>
