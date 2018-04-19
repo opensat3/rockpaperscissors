@@ -2,6 +2,10 @@
 <head></head>
 <body>
 <script>
+function capitalize(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
 function computerPlay() {
     let randomNum = Math.random();
     if (randomNum <= 0.33) {
@@ -15,8 +19,8 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     let draw = "Draw!",
-        loss = `You Lose! ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)} beats ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)}`,
-        win = `You win! ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)} beats ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}`;
+        loss = `You Lose! ${capitalize(computerSelection)} beats ${capitalize(playerSelection)}`,
+        win = `You win! ${capitalize(playerSelection)} beats ${capitalize(computerSelection)}`;
 
     switch(playerSelection) {
         case "rock":
